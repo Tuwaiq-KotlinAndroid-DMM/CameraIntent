@@ -46,6 +46,8 @@ class MainActivity : AppCompatActivity() {
 
                 // Attempt to create an image file
                 val photoFile: File? = try {
+
+                    // Calling the createImageFile function to create a file for us
                     createImageFile()
                 }
 
@@ -97,6 +99,7 @@ class MainActivity : AppCompatActivity() {
         // Get directory name to store the image into that directory
         val storageDir: File? = getExternalFilesDir(Environment.DIRECTORY_PICTURES)
 
+        // Create file and return that file
         return File.createTempFile(
             "JPEG_${timestamp}_", /* Prefix */
             ".jpg", /* Suffix */
